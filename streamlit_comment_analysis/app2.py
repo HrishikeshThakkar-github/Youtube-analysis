@@ -21,8 +21,8 @@ from youtube_transcript_api import YouTubeTranscriptApi
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 # Google API key for YouTube data
-API_KEY = 'AIzaSyB2y_28nvyQyWckdR6Tx_Aqz1JYjp7biwA'  # Replace with your actual API key
-youtube = build('youtube', 'v3', developerKey=API_KEY)
+
+youtube = build('youtube', 'v3', developerKey=os.getenv("YT_API_KEY"))
 
 
 # Function to get comments from YouTube
