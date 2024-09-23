@@ -56,7 +56,7 @@ def sentiment_scores(comments):
 
 # Function to train spam detection model
 def spam_detection_model():
-    data = pd.read_csv(r'C:\Users\Hrishikesh\Desktop\SDP-2\data set\youtube spam collection\Youtube01-Psy.csv')  # Load your dataset
+    data = pd.read_csv(r'Youtube01-Psy.csv')  # Load your dataset
     data["CLASS"] = data["CLASS"].map({0: "Not Spam", 1: "Spam"})
     x = np.array(data["CONTENT"])
     y = np.array(data["CLASS"])
