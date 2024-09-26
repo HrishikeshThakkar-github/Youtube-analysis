@@ -21,6 +21,10 @@ from youtube_transcript_api import YouTubeTranscriptApi
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 # Google API key for YouTube data
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7e0b3d231b638983c98511e2996e922c39d95739
 youtube = build('youtube', 'v3', developerKey=os.getenv("YT_API_KEY"))
 
 
@@ -55,7 +59,7 @@ def sentiment_scores(comments):
 
 # Function to train spam detection model
 def spam_detection_model():
-    data = pd.read_csv(r'Youtube01-Psy.csv')  # Load your dataset
+    data = pd.read_csv(r'https://raw.githubusercontent.com/HrishikeshThakkar-github/Youtube-analysis/refs/heads/main/streamlit_comment_analysis/Youtube01-Psy.csv')  # Load your dataset
     data["CLASS"] = data["CLASS"].map({0: "Not Spam", 1: "Spam"})
     x = np.array(data["CONTENT"])
     y = np.array(data["CLASS"])
